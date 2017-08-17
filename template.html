@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Hello World</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+			
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+	
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    
+</head>
+
+<body>
+    <div data-role="page" id = "foo">
+		<div data-role="header">
+				<a href="#" data-role="button">Button</a>
+                <h1>Page Title</h1>
+				<a href="#" data-role="button">Button</a>
+
+        </div><!-- /header -->
+		
+		<div data-role="content">
+                <p>Hello world</p>    
+				<a href="#bar" data-role="button">Button</a>
+				<a href="#" data-role="button" data-icon="check" data-iconpos="right">Button With Icon</a>
+				<div data-role="controlgroup">
+					<a href="index.html" data-role="button">Yes</a>
+					<a href="index.html" data-role="button">No</a>
+					<a href="index.html" data-role="button">Confirm Later</a>
+				</div>
+				
+				
+					<ul data-role="listview">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				
+				
+				<ul data-role="listview">
+					<li><a href="index.html"><img src="http://www.onlywebpro.com/wp-content/uploads/2010/10/thumb_post05.jpg" />Home</a></li>
+					<li><a href="about.html"><img src="http://www.onlywebpro.com/wp-content/uploads/2010/11/thumb_post17.jpg" />About</a></li>
+					<li><a href="contact.html"><img src="http://www.onlywebpro.com/wp-content/uploads/2011/10/introduction-to-device-orientation-with-html5.jpg"/>Contact</a></li>
+				</ul>
+				
+				<a href="#bar2" data-role="button" data-rel="dialog" data-transition="flip">Open dialog</a>				
+				<a href="confirm.html" data-role="button" data-rel="dialog">Open dialog</a>
+				
+				<form action="" method="get">
+					<label for="basic">Username:</label>
+					<input type="text" name="username" id="username" value=""  />
+					 
+					<label for="remarks">Textarea:</label>
+					<textarea name="remarks" id="remarks"></textarea>
+				</form>
+				
+				<div data-role="fieldcontain">
+					<label for="name">Username:</label>
+					<input type="text" name="username" id="username" value=""  />
+				</div>
+
+				<label for="search">Search:</label>
+				<input type="search" name="search" id="search" value="" />
+
+
+				<label for="select-menu" class="select">Select Menu:</label>
+				<select name="select-menu" id="select-menu"  data-native-menu="false">
+				   <option value="how">How</option>
+				   <option value="are">Are</option>
+				   <option value="you">You?</option>
+				</select>
+				
+				<label for="flip-switch">Flip switch:</label>
+				<select name="flip-switch" id="flip-switch" data-role="slider">
+						<option value="on">True</option>
+						<option value="off">False</option>
+				</select>
+
+				<label for="slider">Input slider:</label>
+				<input type="range" name="slider" id="slider" value="20" min="0" max="100" />
+				
+				<label for="checkbox">Windows</label>
+				<input type="checkbox" name="checkbox" id="checkbox" />
+				<label for="checkbox2">Mac</label>
+				<input type="checkbox" name="checkbox2" id="checkbox2" />
+				 
+				<!--<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+				<label for="radio-choice-1">Car</label>
+				<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+				<label for="radio-choice-2">Van</label>-->
+				
+			
+			<fieldset data-role="controlgroup" data-type="horizontal" >
+			<input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" checked="checked" />
+			<label for="radio-choice-1">Car</label>
+			<input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2"  />
+			<label for="radio-choice-2">Van</label>
+			</fieldset>
+        </div><!-- /content -->
+     
+    <div data-role="footer">
+                <h1>Footer</h1>
+    </div><!-- /footer -->
+	
+    </div>
+	
+	<!-- Start of second page -->
+	<div data-role="page" id="bar2">
+
+		<div data-role="header">
+			<h1>Bar</h1>
+		</div><!-- /header -->
+
+		<div data-role="content">
+			<p>I'm the second in </p>
+			<p><a href="#foo">Back to foo</a></p>
+		</div><!-- /content -->
+
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+	
+	
+	<!-- Start of second page -->
+	<div data-role="page" id="bar">
+		<div data-role="header">
+			<h1>Bar</h1>
+		</div><!-- /header -->
+
+		<div role="main" class="ui-content">
+			<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+			<p><a href="#foo">Back to foo</a></p>
+		</div><!-- /content -->
+
+		<div data-role="footer">
+			<h4>Page Footer</h4>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+	
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>
